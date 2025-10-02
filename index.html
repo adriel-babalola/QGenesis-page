@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QGenesis - Quantum-Enhanced Biology Knowledge Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .logo {
+            font-family: 'Orbitron', sans-serif;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+        @keyframes slide-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .float { animation: float 6s ease-in-out infinite; }
+        .pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+        .slide-up { animation: slide-up 0.8s ease-out forwards; }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        body {
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+        }
+        .quantum-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen text-white overflow-x-hidden">
+    <!-- Quantum Orbs Background -->
+    <div class="quantum-orb w-96 h-96 bg-purple-500 top-0 -left-48 pulse-glow"></div>
+    <div class="quantum-orb w-96 h-96 bg-blue-500 top-1/3 -right-48 pulse-glow" style="animation-delay: 1s;"></div>
+    <div class="quantum-orb w-96 h-96 bg-pink-500 bottom-0 left-1/3 pulse-glow" style="animation-delay: 2s;"></div>
+
+    <!-- Header -->
+    <header class="relative z-10 p-6">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <div style="font-family: sans-serif;" class="logo text-2xl font-bold gradient-text flex items-center gap-2">
+               QGenesis
+            </div>
+            <div class="flex gap-6">
+                <a href="#about" class="hover:text-purple-400 transition flex items-center gap-2">
+                    <i class="fas fa-info-circle"></i> About
+                </a>
+                <a href="#how" class="hover:text-purple-400 transition flex items-center gap-2">
+                    <i class="fas fa-cogs"></i> How It Works
+                </a>
+                <a href="#contact" class="hover:text-purple-400 transition flex items-center gap-2">
+                    <i class="fas fa-envelope"></i> Contact
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative z-10 max-w-7xl mx-auto px-6 py-20 text-center">
+        <div class="slide-up" style="animation-delay: 0.2s;">
+           
+            <h1 style="font-family: sans-serif;" class="text-6xl md:text-8xl font-family font-bold mt-4 mb-6 gradient-text">QGenesis</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-4 flex items-center justify-center gap-2">
+                <i class="fas fa-microchip"></i> The Q-Bio Engine
+            </p>
+            <p class="text-lg text-gray-400 max-w-3xl mx-auto mb-12">
+                A quantum-enhanced biology knowledge engine that uses AI and quantum computing to discover smarter relationships in NASA's bioscience research
+            </p>
+            <div class="flex gap-4 justify-center">
+                <a href="#about" class="glass px-8 py-4 rounded-full hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fas fa-rocket"></i> Learn More
+                </a>
+                <a href="#contact" class="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-full hover:from-purple-700 hover:to-pink-700 transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fas fa-paper-plane"></i> Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div class="glass rounded-3xl p-12">
+            <h2 class="text-4xl font-bold mb-8 gradient-text">What is QGenesis?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-300">The Challenge</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        NASA has accumulated decades of bioscience research from space experiments, but finding connections between studies is difficult. Traditional search relies on keywords and simple similarity—missing deeper, hidden relationships that could unlock breakthrough discoveries for Moon and Mars missions.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-pink-300">Our Solution</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        QGenesis combines classical AI with quantum computing to create a next-generation knowledge engine. We use AI embeddings for intelligent search and summarization, then leverage quantum algorithms to re-rank results—surfacing more relevant and diverse papers by uncovering non-obvious connections.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how" class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <h2 class="text-4xl font-bold mb-12 text-center gradient-text">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass rounded-2xl p-8 transform hover:scale-105 transition">
+                <div class="text-5xl mb-4 text-purple-400">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-purple-300">AI Layer</h3>
+                <p class="text-gray-300">
+                    Advanced AI models process NASA's papers, creating semantic embeddings that capture the meaning and context of each study. Natural language queries return the most relevant initial results.
+                </p>
+            </div>
+            <div class="glass rounded-2xl p-8 transform hover:scale-105 transition" style="animation-delay: 0.2s;">
+                <div class="text-5xl mb-4 text-pink-400">
+                    <i class="fas fa-atom"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-pink-300">Quantum Layer</h3>
+                <p class="text-gray-300">
+                    Quantum kernel methods running on IBM's quantum computers analyze the top candidates, computing quantum similarity scores that reveal subtle, non-linear relationships classical systems miss.
+                </p>
+            </div>
+            <div class="glass rounded-2xl p-8 transform hover:scale-105 transition" style="animation-delay: 0.4s;">
+                <div class="text-5xl mb-4 text-blue-400">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-4 text-blue-300">Future-Ready</h3>
+                <p class="text-gray-300">
+                    As quantum hardware matures, QGenesis will scale to process larger datasets and uncover even more complex patterns—paving the way for accelerated scientific discovery in space biology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof of Concept -->
+    <section class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div class="glass rounded-3xl p-12 text-center">
+            <h2 class="text-4xl font-bold mb-6 gradient-text">Current Focus</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                We're building a proof-of-concept using NASA's Open Science Data Repository (OSDR), focusing on microgravity effects on mouse musculoskeletal systems. This smaller-scale demonstration validates our quantum-enhanced approach and showcases its potential for future space biology research.
+            </p>
+            <div class="flex gap-4 justify-center flex-wrap">
+                <span class="glass px-6 py-3 rounded-full text-purple-300 flex items-center gap-2">
+                    <i class="fas fa-database"></i> NASA OSDR
+                </span>
+                <span class="glass px-6 py-3 rounded-full text-pink-300 flex items-center gap-2">
+                    <i class="fas fa-project-diagram"></i> Quantum Kernels
+                </span>
+                <span class="glass px-6 py-3 rounded-full text-blue-300 flex items-center gap-2">
+                    <i class="fab fa-ibm"></i> IBM Quantum
+                </span>
+                <span class="glass px-6 py-3 rounded-full text-green-300 flex items-center gap-2">
+                    <i class="fas fa-network-wired"></i> AI Embeddings
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative z-10 max-w-7xl mx-auto px-6 py-20">
+        <div class="glass rounded-3xl p-12 text-center">
+            <h2 class="text-4xl font-bold mb-6 gradient-text">Let's Connect</h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Interested in learning more about QGenesis or collaborating on this project?
+            </p>
+            <div class="flex gap-6 justify-center flex-wrap">
+                <a href="mailto:krame.org@gmail.com" class="glass px-8 py-4 rounded-full hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fas fa-envelope text-purple-400"></i> Email
+                </a>
+                <a href="www.linkedin.com/in/adriel-babalola-37a250345" class="glass px-8 py-4 rounded-full hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fab fa-linkedin text-blue-400"></i> LinkedIn
+                </a>
+                <a href="https://github.com/adriel-babalola" class="glass px-8 py-4 rounded-full hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fab fa-github text-gray-400"></i> GitHub
+                </a>
+                <a href="#" class="glass px-8 py-4 rounded-full hover:bg-white hover:bg-opacity-10 transition transform hover:scale-105 flex items-center gap-2">
+                    <i class="fab fa-twitter text-blue-300"></i> Twitter
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 max-w-7xl mx-auto px-6 py-12 text-center text-gray-400">
+        <p class="mb-2">QGenesis - NASA Space Apps Challenge 2025</p>
+        <p class="text-sm">Building the future of space biology knowledge discovery, one qubit at a time</p>
+    </footer>
+</body>
+</html>
